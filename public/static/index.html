@@ -1,0 +1,35 @@
+<div class="row-fluid">
+  <div class="span12">
+    <div class="input-prepend">
+        <span class="add-on">---พิมพ์คำสำคัญที่ต้องการค้นหาข้อมูล---<i class="icon-search"></i></span>
+        <input type="text" placeholder="Search" ng-model="search">    
+    </div>
+        <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>คณะ</th>
+          <th>ชื่อเวทีวิชาการ</th>    
+          <th>ระดับ</th>
+          <th>รูปแบบการจัดประชุม</th> 
+          <th>สถานที่จัดประชุม</th>                            
+          <th>ประเทศ</th>
+          <th>ระยะเวลา</th>                                        
+         
+          <th>เพิ่มข้อมูล <a href="#/add/gradstate"><i class="icon-plus-sign"></i></a></th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="gradstate in gradstate_list |  filter:search ">
+          <td><a href="#/edit/gradstate/{{gradstate._id.$oid}}">{{gradstate.faculty}}</a></td>       
+          <td><a href="#/edit/gradstate/{{gradstate._id.$oid}}">{{gradstate.name}}</a></td>       
+          <td>{{gradstate.level}}</td>     
+          <td>{{gradstate.format}}</td>    
+          <td>{{gradstate.place}}</td>    
+          <td>{{gradstate.country}}</td>     
+          <td>{{gradstate.time}}</td>  
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+</div>  
+

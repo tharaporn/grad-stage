@@ -1,0 +1,193 @@
+<form class="form-horizontal" role="form">  
+
+  <div class="control-group">
+    <label class="control-label" for="inputName">ปีการศึกษา: </label> 
+    <div class="controls">
+        <select id="inputName" placeholder="Owner" ng-model="gradstate.year">
+            <option ng-selected="gradstate.year=='2556'">2556</option>
+            <option ng-selected="gradstate.year=='2557'">2557</option>
+            <option ng-selected="gradstate.year=='2558'">2558</option>
+            <option ng-selected="gradstate.year=='2559'">2559</option>
+            <option ng-selected="gradstate.year=='2560'">2560</option>            
+          </select>
+    </div>
+  </div> 
+
+    <div class="control-group">
+    <label class="control-label" for="inputName">เวทีวิชาการ: </label> 
+    <div class="controls">
+        <select id="inputName" placeholder="Owner" ng-model="gradstate.level">
+            <option ng-selected="gradstate.level=='ชาติ'">ระดับชาติ</option>
+            <option ng-selected="gradstate.level=='นานาชาติ'">ระดับนานาชาติ</option>
+          </select>
+    </div>
+  </div> 
+
+  <div class="control-group">
+    <label class="control-label" for="inputName">คณะ: </label> 
+    <div class="controls">
+        <select id="inputName" placeholder="Owner" ng-model="gradstate.faculty">
+            <option ng-selected="gradstate.faculty=='คณะแพทยศาสตร์'">คณะแพทยศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะพยาบาลศาสตร์'">คณะพยาบาลศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะเภสัชศาสตร์'">คณะเภสัชศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะสาธารณสุขศาสตร์'">คณะสาธารณสุขศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะสหเวชศาสตร์'">คณะสหเวชศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะทันตแพทยศาสตร์'">คณะทันตแพทยศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะวิทยาศาสตร์การแพทย์'">คณะวิทยาศาสตร์การแพทย์</option>
+            <option ng-selected="gradstate.faculty=='คณะบริหารธุรกิจ เศรษฐศาสตร์และการสื่อสาร'">คณะบริหารธุรกิจ เศรษฐศาสตร์และการสื่อสาร</option>
+            <option ng-selected="gradstate.faculty=='คณะศึกษาศาสตร์">คณะศึกษาศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะมนุษยศาสตร์'">คณะมนุษยศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะสังคมศาสตร์'">คณะสังคมศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะเกษตรศาสตร์ทรัพยากรธรรมชาติและสิ่งแวดล้อม'">คณะเกษตรศาสตร์ทรัพยากรธรรมชาติและสิ่งแวดล้อม</option>
+            <option ng-selected="gradstate.faculty=='คณะสถาปัตยกรรมศาสตร์'">คณะสถาปัตยกรรมศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะวิศวกรรมศาสตร์'">คณะวิศวกรรมศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+            <option ng-selected="gradstate.faculty=='คณะวิทยาลัยพลังงานทดแทน'">วิทยาลัยพลังงานทดแทน</option>
+            <option ng-selected="gradstate.faculty=='คณะวิทยาลัยเพื่อการค้นคว้าระดับรากฐาน'">วิทยาลัยเพื่อการค้นคว้าระดับรากฐาน</option>
+            <option ng-selected="gradstate.faculty=='คณะวิทยาลัยโลจิสติกส์และโซ่อุปทาน'">วิทยาลัยโลจิสติกส์และโซ่อุทาน</option>
+          </select>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputName">สาขาวิชา: </label> 
+    <div class="controls">
+        <select id="inputName" placeholder="Owner" ng-model="gradstate.major">
+         <option ng-selected="gradstate.faculty=='คณะเกษตรศาสตร์ทรัพยากรธรรมชาติและสิ่งแวดล้อม'">---คณะเกษตรศาสตร์ทรัพยากรธรรมชาติและสิ่งแวดล้อม---</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาศาสตร์การเกษตร'">สาขาวิชาวิทยาศาสตร์การเกษตร</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาศาสตร์และเทคโนโลยีการอาหาร'">สาขาวิชาวิทยาศาสตร์และเทคโนโลยีการอาหาร</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาศาสตร์สิ่งแวดล้อม'">สาขาวิชาวิทยาศาสตร์สิ่งแวดล้อม</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเทคโนโลยีชีวภาพทางการเกษตร'">สาขาวิชาเทคโนโลยีชีวภาพทางการเกษตร</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาทรัพยากรธรรมชาติและสิ่งแวดล้อม'">สาขาวิชาทรัพยากรธรรมชาติและสิ่งแวดล้อม</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาภูมิสารสนเทศศาสตร์'">สาขาวิชาภูมิสารสนเทศศาสตร์</option>    
+         <option ng-selected="gradstate.faculty=='คณะวิทยาศาสตร์">---คณะวิทยาศาสตร์---</option>      
+            <option ng-selected="gradstate.major=='สาขาวิชาคณิตศาสตร์'">สาขาวิชาคณิตศาสตร์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเคมี'">สาขาวิชาเคมี</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเคมีอุตสาหกรรม'">สาขาวิชาเคมีอุตสาหกรรม</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเทคโนโลยีชีวภาพ'">สาขาวิชาเทคโนโลยีชีวภาพ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเทคโนโลยีสารสนเทศ'">สาขาวิชาเทคโนโลยีสารสนเทศ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาฟิสิกส์'">สาขาวิชาฟิสิกส์</option>       
+            <option ng-selected="gradstate.major=='สาขาวิชาฟิสิกส์ประยุกต์'">สาขาวิชาฟิสิกส์ประยุกต์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาการคอมพิวเตอร์'">สาขาวิชาวิทยาการคอมพิวเตอร์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาศาสตร์ชีวภาพ'">สาขาวิชาวิทยาศาสตร์ชีวภาพ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาสถิติ'">สาขาวิชาสถิติ</option>
+         <option ng-selected="gradstate.faculty=='คณะวิศวกรรมศาสตร์'">---คณะวิศวกรรมศาสตร์---</option>      
+            <option ng-selected="gradstate.major=='สาขาวิชาวิศวกรรมการจัดการ'">สาขาวิชาวิศวกรรมการจัดการ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาการจัดการวิศวกรรมโครงสร้างพื้นฐาน'">สาขาวิชาการจัดการวิศวกรรมโครงสร้างพื้นฐาน</option>        
+            <option ng-selected="gradstate.major=='สาขาวิชาการบริหารงานก่อสร้าง'">สาขาวิชาการบริหารงานก่อสร้าง</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิศวกรรมเครื่องกล'">สาขาวิชาวิศวกรรมเครื่องกล</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิศวกรรมไฟฟ้า'">สาขาวิชาวิศวกรรมไฟฟ้า</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิศวกรรมโยธา'">สาขาวิชาวิศวกรรมโยธา</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิศวกรรมสิ่งแวดล้อม'">สาขาวิชาวิศวกรรมสิ่งแวดล้อม</option>   
+            <option ng-selected="gradstate.major=='สาขาวิชาวิศวกรรมอุตสาหการ'">สาขาวิชาวิศวกรรมอุตสาหการ</option>   
+          <option ng-selected="gradstate.faculty=='คณะสถาปัตยกรรมศาสตร์'">---คณะสถาปัตยกรรมศาสตร์---</option> 
+            <option ng-selected="gradstate.major=='สาขาวิชาศิลปะและการออกแบบ'">สาขาวิชาศิลปะและการออกแบบ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาสถาปัตยกรรมศาสตร์'">สาขาวิชาสถาปัตยกรรมศาสตร์</option>
+          <option ng-selected="gradstate.faculty=='คณะวิทยาลัยพลังงานทดแทน'">---วิทยาลัยพลังงานทดแทน---</option>  
+            <option ng-selected="gradstate.major=='สาขาวิชาพลังงานทดแทน'">สาขาวิชาพลังงานทดแทน</option>    
+          <option ng-selected="gradstate.faculty=='คณะพยาบาลศาสตร์'">---คณะพยาบาลศาสตร์---</option>   
+            <option ng-selected="gradstate.major=='สาขาวิชาการบริหารการพยาบาล'">สาขาวิชาการบริหารการพยาบาล</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาการพยาบาลเวชปฏิบัติชุมชน'">สาขาวิชาการพยาบาลเวชปฏิบัติชุมชน</option>
+          <option ng-selected="gradstate.faculty=='คณะแพทยศาสตร์'">---คณะแพทยศาสตร์---</option>  
+            <option ng-selected="gradstate.major=='สาขาวิชาการคลังและการบริหารระบบประกันสุขภาพ'">สาขาวิชาการคลังและการบริหารระบบประกันสุขภาพ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาศาสตร์สุขภาพศึกษา'">สาขาวิชาวิทยาศาสตร์สุขภาพศึกษา</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาระบบและนโยบายสุขภาพ'">สาขาวิชาระบบและนโยบายสุขภาพ</option>
+          <option ng-selected="gradstate.faculty=='คณะวิทยาลัยเพื่อการค้นคว้าระดับรากฐาน'">---วิทยาลัยเพื่อการค้นคว้าระดับรากฐาน---</option>  
+            <option ng-selected="gradstate.major=='สาขาวิชาฟิสิกส์ทฤษฏี'">สาขาวิชาฟิสิกส์ทฤษฏี</option>       
+            <option ng-selected="gradstate.major=='สาขาวิชาสนามควอนตัม ความโน้มถ่วงและจักรวาลวิทยา'">สาขาวิชาสนามควอนตัม ความโน้มถ่วงและจักรวาลวิทยา</option>    
+          <option ng-selected="gradstate.faculty=='คณะทันตแพทยศาสตร์'">---คณะทันตแพทยศาสตร์---</option>  
+            <option ng-selected="gradstate.major=='สาขาวิชาชีววิทยาช่องปาก'">สาขาวิชาชีววิทยาช่องปาก</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเอนโดดอนติกส์'">สาขาวิชาเอนโดดอนติกส์</option>
+          <option ng-selected="gradstate.faculty=='คณะเภสัชศาสตร์'">---คณะเภสัชศาสตร์---</option>  
+            <option ng-selected="gradstate.major=='สาขาวิชาเภสัชศาสตร์'">สาขาวิชาเภสัชศาสตร์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาศาสตร์เครื่องสำอางค์'">สาขาวิชาวิทยาศาสตร์เครื่องสำอางค์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเภสัชวิทยา'">สาขาวิชาเภสัชวิทยา</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเภสัชเคมีและผลิตภัณฑ์ธรรมชาติ'">สาขาวิชาเภสัชเคมีและผลิตภัณฑ์ธรรมชาติ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเภสัชกรรมชุมชน'">สาขาวิชาเภสัชกรรมชุมชน</option>       
+          <option ng-selected="gradstate.faculty=='คณะวิทยาศาสตร์การแพทย์'">---คณะวิทยาศาสตร์การแพทย์---</option> 
+            <option ng-selected="gradstate.major=='สาขาวิชากายวิภาคศาสตร์'">สาขาวิชากายวิภาคศาสตร์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาจุลชีววิทยา'">สาขาวิชาจุลชีววิทยา</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาชีวเคมี'">สาขาวิชาชีวเคมี</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาศาสตร์การแพทย์'">สาขาวิชาวิทยาศาสตร์การแพทย์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาสรีรวิทยา'">สาขาวิชาสรีรวิทยา</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาปรสิตวิทยา'">สาขาวิชาปรสิตวิทยา</option>   
+          <option ng-selected="gradstate.faculty=='คณะสาธารณสุขศาสตร์'">---คณะสาธารณสุขศาสตร์---</option>      
+            <option ng-selected="gradstate.major=='สาขาวิชาการจัดการการบริการสุขภาพปฐมภูมิ'">สาขาวิชาการจัดการการบริการสุขภาพปฐมภูมิ</option>
+          <option ng-selected="gradstate.faculty=='คณะสหเวชศาสตร์'">---คณะสหเวชศาสตร์---</option>  
+            <option ng-selected="gradstate.major=='สาขาวิชาชีวเวชศาสตร์'">สาขาวิชาชีวเวชศาสตร์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเทคนิคการแพทย์'">สาขาวิชาเทคนิคการแพทย์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชากายภาพบำบัด'">สาขาวิชากายภาพบำบัด</option>
+          <option ng-selected="gradstate.faculty=='คณะมนุษยศาสตร์'">---คณะมนุษยศาสตร์---</option>   
+            <option ng-selected="gradstate.major=='สาขาวิชาคติชนวิทยา'">สาขาวิชาคติชนวิทยา</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาภาษาไทย'">สาขาวิชาภาษาไทย</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาภาษาศาสตร์'">สาขาวิชาภาษาศาสตร์</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาภาษาอังกฤษ'">สาขาวิชาภาษาอังกฤษ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาวิทยาการดนตรีและนาฏศิลป์'">สาขาวิชาวิทยาการดนตรีและนาฏศิลป์</option>
+          <option ng-selected="gradstate.faculty=='คณะบริหารธุรกิจ เศรษฐศาสตร์และการสื่อสาร'">--คณะบริหารธุรกิจ เศรษฐศาสตร์และการสื่อสาร---</option> 
+            <option ng-selected="gradstate.major=='สาขาวิชาการบริหารธุรกิจ'">สาขาวิชาการบริหารธุรกิจ</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาการจัดการการท่องเที่ยว'">สาขาวิชาการจัดการการท่องเที่ยว</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาการสื่อสาร'">สาขาวิชาการสื่อสาร</option>        
+          <option ng-selected="gradstate.faculty=='คณะศึกษาศาสตร์">---คณะศึกษาศาสตร์---</option> 
+            <option ng-selected="gradstate.major=='สาขาวิชาการบริหารการศึกษา'">สาขาวิชาการบริหารการศึกษา</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาการวิจัยและประเมินผลการศึกษา'">สาขาวิชาการวิจัยและประเมินผลการศึกษา</option>   
+            <option ng-selected="gradstate.major=='สาขาวิชาหลักสูตรและการสอน">สาขาวิชาหลักสูตรและการสอน</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเทคโนโลยีและสื่อสารการศึกษา'">สาขาวิชาเทคโนโลยีและสื่อสารการศึกษา</option>
+          <option ng-selected="gradstate.faculty=='คณะสังคมศาสตร์'">---คณะสังคมศาสตร์---</option>  
+            <option ng-selected="gradstate.major=='สาขาวิชาเอเชียตะวันออกเฉียงใต้'">สาขาวิชาเอเชียตะวันออกเฉียงใต้</option>
+          <option ng-selected="gradstate.faculty=='คณะวิทยาลัยโลจิสติกส์และโซ่อุปทาน'">---วิทยาลัยโลจิสติกส์และโซ่อุทาน---</option>  
+            <option ng-selected="gradstate.major=='สาขาวิชาโลจิสติกส์และโซ่อุปทาน'">สาขาวิชาโลจิสติกส์และโซ่อุปทาน</option>    
+          </select>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputName">ชื่อเวทีวิชาการ: </label>
+    <div class="controls">
+      <input type="text" class="form-control" id="inputName" placeholder="ชื่อ" ng-model="gradstate.name">
+       </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputName">รูปแบบการจัดประชุม: </label>
+    <div class="controls">
+      <input type="text" id="inputName" placeholder="รูปแบบ" ng-model="gradstate.format">
+          </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputName">สถานที่จัดประชุม: </label>
+    <div class="controls">
+      <input type="text" id="inputName" placeholder="สถานที่จัด" ng-model="gradstate.place">
+          </div>
+  </div>  
+  
+  <div class="control-group">
+    <label class="control-label" for="inputName">ประเทศ: </label>
+    <div class="controls">
+      <input type="text" id="inputName" placeholder="ประเทศ" ng-model="gradstate.country">
+          </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label" for="inputName">ระยะเวลา: </label>
+    <div class="controls">
+      <input type="text" id="inputName" placeholder="ระยะเวลา" ng-model="gradstate.time">
+          </div>
+  </div>
+    
+  <div class="control-group">
+      <label class="control-label" for="inputName">ไฟล์ข้อมูล: </label>
+      <div class="controls">
+          <input type="text" id="inputName" placeholder="load" ng-model="gradstate.Load"> <a href="{{gradstate.load}}" ng-show="gradstate.load"> ไฟล์</a>          
+        </div>
+    </div> 
+      
+  <div class="control-group">
+        <div class="controls">
+          <button ng-click="save()" class="btn btn-primary" type="submit"> <i class="icon-ok icon-white"></i> Save</button>
+          <button ng-click="destroy()" ng-show="gradstate._id" class="btn btn-success"><i class="icon-remove icon-white"></i> Delete</button>
+              <a href="#/" class="btn btn-danger"><i class="icon-ban-circle icon-white"></i> Cancel</a> 
+         </div>
+  </div>
+   
+</form>
