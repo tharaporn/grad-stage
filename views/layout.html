@@ -40,6 +40,8 @@
           <ul class="nav">
             <li><a href="#"><i class="icon-home icon-white"></i> Home</a></li>        
           
+            <li><a href="#/mainn"></i> เลือกคณะ</a></li>        
+          
           <ul class="nav" ng-controller="YearListController">
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">เลือกปีการศึกษา 
@@ -50,21 +52,8 @@
                 </ul>
               </li>
             </ul>
-            
-            
-         <ul class="nav" ng-controller="YearListController">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">เลือกคณะ 
-                <b class="caret"></b>
-              </a>
-                <ul class="dropdown-menu">
-                  <li ng-repeat="faculty in faculty_list"><a href="" ng-click="filter(faculty)"><span ng-bind="faculty"></span></a></li>  
-                </ul>
-              </li>
-           </ul>
-            
-            
-            
+          
+      
           </ul>   
           </ul>
         </div>    

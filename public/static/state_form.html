@@ -117,6 +117,8 @@
             <option ng-selected="gradstate.major=='สาขาวิชาชีวเวชศาสตร์'">สาขาวิชาชีวเวชศาสตร์</option>
             <option ng-selected="gradstate.major=='สาขาวิชาเทคนิคการแพทย์'">สาขาวิชาเทคนิคการแพทย์</option>
             <option ng-selected="gradstate.major=='สาขาวิชากายภาพบำบัด'">สาขาวิชากายภาพบำบัด</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาเทคโนโลยีหัวใจและทรวงอก'">สาขาวิชาเทคโนโลยีหัวใจและทรวงอก</option>
+            <option ng-selected="gradstate.major=='สาขาวิชาฟิสิกส์การแพทย์'">สาขาวิชาฟิสิกส์การแพทย์</option>
           <option ng-selected="gradstate.faculty=='คณะมนุษยศาสตร์'">---คณะมนุษยศาสตร์---</option>   
             <option ng-selected="gradstate.major=='สาขาวิชาคติชนวิทยา'">สาขาวิชาคติชนวิทยา</option>
             <option ng-selected="gradstate.major=='สาขาวิชาภาษาไทย'">สาขาวิชาภาษาไทย</option>
@@ -143,7 +145,7 @@
   <div class="control-group">
     <label class="control-label" for="inputName">ชื่อเวทีวิชาการ: </label>
     <div class="controls">
-      <input type="text" class="form-control" id="inputName" placeholder="ชื่อ" ng-model="gradstate.name">
+      <textarea class="form-control" rows="3" id="inputName" placeholder="ชื่อ" ng-model="gradstate.name"></textarea>
        </div>
   </div>
   

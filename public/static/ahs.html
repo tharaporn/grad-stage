@@ -5,9 +5,10 @@
         <input type="text" placeholder="Search" ng-model="search">    
     </div>
     
-      <br><div class="alert alert-success">แสดงข้อมูลทั้งหมด</div>
-              <a href="#/add/gradstate" class="btn btn-danger"><i class="icon-plus icon-white"></i> เพิ่มข้อมูล</a>
-      
+    <br><div class="alert alert-danger">คณะสหเวชศาสตร์</div>
+    
+          <a href="#/add/gradstate" class="btn btn-danger"><i class="icon-plus icon-white"></i> เพิ่มข้อมูล</a>
+      <br> 
         <table class="table table-striped">
       <thead>
         <tr>
@@ -18,12 +19,11 @@
           <th>สถานที่จัดประชุม</th>                            
           <th>ประเทศ</th>
           <th>ระยะเวลา</th>                                        
-         
-               
+   
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="gradstate in gradstate_list |  filter:search ">
+        <tr ng-repeat="gradstate in gradstate_list |  filter:search " ng-show="gradstate.faculty=='คณะสหเวชศาสตร์'">
           <td><a href="#/edit/gradstate/{{gradstate._id.$oid}}">{{gradstate.faculty}}</a></td>       
           <td><a href="#/edit/gradstate/{{gradstate._id.$oid}}">{{gradstate.name}}</a></td>       
           <td>{{gradstate.level}}</td>     
@@ -35,5 +35,5 @@
       </tbody>
     </table>
   </div>  
-</div>  
+</div>      
 

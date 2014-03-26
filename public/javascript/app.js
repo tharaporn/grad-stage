@@ -16,7 +16,13 @@ app.config(function($routeProvider) {
   $routeProvider.when('/projects/:year', {
     controller:gradstateListByYearController, 
     templateUrl:'static/index.html'
+  });    
+  
+  $routeProvider.when('/projects/:faculty', {
+    controller:gradstateListByFacultyController, 
+    templateUrl:'static/mainn.html'
   });    	
+  	
   
   $routeProvider.when('/', {
     controller:gradstateListController, 
@@ -33,6 +39,37 @@ app.config(function($routeProvider) {
     templateUrl:'static/mainn.html'
   });   
    	
+  $routeProvider.when('/engi', {
+    controller:gradstateListController, 
+    templateUrl:'static/engi.html'
+  });   
+    
+   $routeProvider.when('/sci', {
+    controller:gradstateListController, 
+    templateUrl:'static/sci.html'
+  });      
+ 
+    $routeProvider.when('/insti', {
+    controller:gradstateListController, 
+    templateUrl:'static/insti.html'
+  });
+  
+    $routeProvider.when('/med', {
+    controller:gradstateListController, 
+    templateUrl:'static/med.html'
+  });  
+  
+    $routeProvider.when('/ahs', {
+    controller:gradstateListController, 
+    templateUrl:'static/ahs.html'
+  });  
+    
+    $routeProvider.when('/dent', {
+    controller:gradstateListController, 
+    templateUrl:'static/dent.html'
+  });  
+        
+    
 });
 
 function gradstateController($scope, $routeParams, $location, gradstate) {
@@ -84,6 +121,7 @@ function gradstateListByYearController($scope, $routeParams, gradstate) {
 }
 
 
+
 function YearListController($scope, $location, gradstate) {
   gradstate.query(function(response) {
     var years = {}; // {'2556':1}
@@ -97,7 +135,7 @@ function YearListController($scope, $location, gradstate) {
       }      
     }    
     year_list.sort();
-    console.log(year_list);
+    //console.log(year_list);
     $scope.year_list = year_list;    
   });  
   
@@ -106,3 +144,42 @@ function YearListController($scope, $location, gradstate) {
   };
   
 }
+
+function FacultyListController($scope, $location, gradstate) {
+  gradstate.query(function(response) {
+    var facultys = {}; // {'2556':1}
+    var faculty_list = [];
+    
+    for(var idx=0;idx<response.length;idx++) {      
+      var gradstate = response[idx];
+      if(gradstate.faculty && !facultys[gradstate.faculty]) {
+        facultys[gradstate.faculty] = 1;
+        faculty_list.push(gradstate.faculty);             
+      }      
+    }    
+    faculty_list.sort();
+    console.log(faculty_list);
+    $scope.faculty_list = faculty_list;    
+  });  
+  
+  $scope.filter = function(faculty) {
+    $location.path('/projects/'+faculty);
+  };
+  
+}
+
+function gradstateListByFacultyController($scope, $routeParams, gradstate) {
+  consol.log("OK");
+  gradstate.query(function(response) {
+    var gradstate_list = [];
+    for(var idx=0;idx<response.length;idx++) {      
+      var gradstate = response[idx];
+      if(gradstate.faculty== $routeParams.faculty) {
+        gradstate_list.push(gradstate);
+      }
+    }
+    $scope.gradstate_list = gradstate_list;
+    console.log(gradstate_list);
+  });
+}
+
